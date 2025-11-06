@@ -1,13 +1,11 @@
 package br.com.deliverymuch.storelisting.retrofit
 
-import androidx.compose.ui.geometry.Rect
 import br.com.deliverymuch.storelisting.utils.Constants
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
-import kotlin.apply
 
 fun provideOkHttpClient(isDebug: Boolean): OkHttpClient {
     val logging: HttpLoggingInterceptor = HttpLoggingInterceptor().apply {
