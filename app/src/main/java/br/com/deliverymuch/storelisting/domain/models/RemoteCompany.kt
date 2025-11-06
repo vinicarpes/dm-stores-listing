@@ -5,11 +5,16 @@ import kotlinx.serialization.Serializable
 import java.math.BigDecimal
 
 @Serializable
-data class Store(
+data class RemoteCompany(
+    @SerialName("uuid")
     val uuid: String,
+    @SerialName("name")
     val name: String,
+    @SerialName("slug")
     val slug: String,
+    @SerialName("image")
     val image: String,
+    @SerialName("phone")
     val phone: String,
     @SerialName("is_online")
     val isOnline: Boolean,
@@ -19,19 +24,28 @@ data class Store(
     val cookingTime: Int,
     @SerialName("can_pickup")
     val canPickup: Boolean,
+    @SerialName("location")
     val location: String,
     @SerialName("minimum_order_price")
     val minimumOrderPrice: Int,
+    @SerialName("description")
     val description: String,
-    val categories: List<Category>,
+    @SerialName("categories")
+    val categories: List<RemoteCategory>,
     @SerialName("payment_methods")
-    val paymentMethods: List<PaymentMethod>,
-    val address: Address,
+    val paymentMethods: List<RemotePaymentMethod>,
+    @SerialName("badges")
+    val badges: List<RemoteBadge>,
+    @SerialName("address")
+    val address: RemoteAddress,
     @SerialName("company_type")
     val companyType: String,
     @SerialName("formatted_address")
     val formattedAddress: String,
+    @SerialName("city_id")
     val cityId: Int,
+    @SerialName("distance")
     val distance: BigDecimal,
-    val new: Boolean
+    @SerialName("new")
+    val isNew: Boolean
 )
