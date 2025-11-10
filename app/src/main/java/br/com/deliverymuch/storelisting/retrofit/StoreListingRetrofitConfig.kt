@@ -20,7 +20,7 @@ fun provideOkHttpClient(isDebug: Boolean): OkHttpClient {
         .build()
 }
 
-fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
+fun createRetrofit(okHttpClient: OkHttpClient): Retrofit {
     return Retrofit.Builder()
         .baseUrl(Constants.BASE_URL)
         .client(okHttpClient)
