@@ -8,5 +8,6 @@ import kotlinx.serialization.Serializable
 data class RemoteCompanies(
     @SerialName("total_count")
     val totalCount: Int,
+    @SerialName("data")
     val data: List<RemoteCompany>
 )
