@@ -10,5 +10,5 @@ interface ApiService {
         @Query("lat") lat: Double,
         @Query("lng") lng: Double,
         @Query("type") type: String = "Todos"
-    ): RemoteCompanies
+    ): RemoteCompanies?
 }

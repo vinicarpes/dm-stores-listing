@@ -1,7 +1,6 @@
 package br.com.deliverymuch.storelisting.ui
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -12,18 +11,15 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.lifecycle.lifecycleScope
 import br.com.deliverymuch.storelisting.ui.theme.DmstorelistingTheme
-import br.com.deliverymuch.storelisting.usecase.CompanyUseCase
+import br.com.deliverymuch.storelisting.usecase.DefaultCompanyUseCaseImpl
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     @Inject
-    lateinit var companyUseCase: CompanyUseCase
+    lateinit var companyUseCase: DefaultCompanyUseCaseImpl
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
